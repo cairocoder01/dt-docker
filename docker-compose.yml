@@ -1,0 +1,33 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    container_name: dt-db
+    ports:
+      - "33061:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: discipletools
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:4.9-php7.2-apache
+    ports:
+      - "8000:80"
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+    working_dir: /var/www/html
+    volumes:
+      - ./wp-content:/var/www/html/wp-content
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+
+volumes:
+  db_data:
