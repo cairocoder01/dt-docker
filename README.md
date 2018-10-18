@@ -26,3 +26,6 @@ All of this will be running on a Linux virtual machine in order to duplicate as 
 1. Install plugins
    1. (Optional) https://github.com/DiscipleTools/disciple-tools-demo-content
    1. https://github.com/WP-API/Basic-Auth
+   1. https://wordpress.org/plugins/jwt-authentication-for-wp-rest-api/
+      1. Follow directions on plugin page to add auth header config to .htaccess
+      1. Follow directions on plugin page to add 2 values to wp-config.php
