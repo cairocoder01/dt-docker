@@ -21,6 +21,7 @@ services:
     container_name: dt-web
     ports:
       - "8000:80"
+      - "44300:443"
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
@@ -28,6 +29,7 @@ services:
     working_dir: /var/www/html
     volumes:
       - ./wp-content:/var/www/html/wp-content
+      - ./.htaccess:/var/www/html/.htaccess
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
 
 volumes:
