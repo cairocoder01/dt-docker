@@ -1,5 +1,7 @@
 db_data/*
 wp-content
+server.crt
+server.key
 
 # Created by .ignore support plugin (hsz.mobi)
 ### JetBrains template
