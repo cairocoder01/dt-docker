@@ -28,10 +28,10 @@ services:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DEBUG: 1
     working_dir: /var/www/html
     volumes:
-      - ./wp-content:/var/www/html/wp-content
-      - ./.htaccess:/var/www/html/.htaccess
+      - ./wordpress:/var/www/html
       - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
 
 volumes:
