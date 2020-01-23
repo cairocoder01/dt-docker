@@ -11,6 +11,7 @@ RUN a2enmod rewrite
 RUN a2enmod ssl
 RUN service apache2 restart
 
+# Latest release available at https://github.com/DiscipleTools/disciple-tools-theme/releases/latest/download/disciple-tools-theme.zip
 #RUN curl -o dt-theme.tar.gz -fSL "https://github.com/DiscipleTools/disciple-tools-theme/archive/0.11.0.tar.gz"; \
 #  tar -xzf dt-theme.tar.gz -C /usr/src; \
 #  rm dt-theme.tar.gz; \

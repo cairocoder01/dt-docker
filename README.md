@@ -25,6 +25,7 @@ All of this will be running on a Linux virtual machine in order to duplicate as 
 1. Step through Wordpress installation process
 
 1. Install Theme: https://github.com/DiscipleTools/disciple-tools-theme
+    1. Download latest release: https://github.com/DiscipleTools/disciple-tools-theme/releases/latest/download/disciple-tools-theme.zip
 
 1. Install plugins
    1. https://github.com/DiscipleTools/disciple-tools-demo-content
